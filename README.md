@@ -1,2 +1,7 @@
-# devo-tribe-azure-ks-dec-2025-3
-devo-tribe-azure-ks-dec-2025-3
+# Knowledge Sharing (KS) session
+
+- Devoteam M Cloud
+- Tribe Azure
+- Friday, 19th December 2025
+
+Contact : thibault.gibard@devoteam.com
