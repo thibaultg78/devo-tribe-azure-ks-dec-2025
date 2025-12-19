@@ -30,8 +30,8 @@ jobs:
         run: |
           az acr build \
             --registry acrdevoteamdemo3 \
-            --image devo-tribe-azure-ks-dec-2025-3:${{ github.sha }} \
-            --image devo-tribe-azure-ks-dec-2025-3:latest \
+            --image devo-tribe-azure-ks-dec-2025:${{ github.sha }} \
+            --image devo-tribe-azure-ks-dec-2025:latest \
             --file Dockerfile \
             .
       
@@ -39,12 +39,12 @@ jobs:
         run: |
           az container create \
             --resource-group RG-Thibault \
-            --name devo-tribe-azure-ks-dec-2025-3 \
-            --image acrdevoteamdemo3.azurecr.io/devo-tribe-azure-ks-dec-2025-3:latest \
+            --name devo-tribe-azure-ks-dec-2025 \
+            --image acrdevoteamdemo3.azurecr.io/devo-tribe-azure-ks-dec-2025:latest \
             --registry-login-server acrdevoteamdemo3.azurecr.io \
             --registry-username ${{ secrets.AZURE_CLIENT_ID }} \
             --registry-password ${{ secrets.AZURE_CLIENT_SECRET }} \
-            --dns-name-label devo-tribe-azure-ks-dec-2025-3 \
+            --dns-name-label devo-tribe-azure-ks-dec-2025 \
             --ports 80 \
             --os-type Linux \
             --cpu 1 \
